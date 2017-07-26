@@ -1,0 +1,79 @@
+========================================================================
+Track file:
+========================================================================
+track a new file/modifed file:
+	git add [file_name]
+________________________________
+add file into cache
+	git commit -m '[message for this commmit]'
+________________________________
+in short , you can do
+	git commit -a -m '[message for this commmit]'
+this will do both of them at once
+________________________________
+check for the status
+	git status
+or
+	git status -s
+for summary display
+________________________________
+check the detail for the change for the change
+	git diff
+check the detail change for file in the cache, (file alread been git commit xxx)
+	git diff --cached
+________________________________
+remove file from dir
+	rm xxx.xxx
+remove file from dir and git recordhi
+	git rm xxx.xxx
+remove file only on git(both git repo and git cache)
+	git rm --cached xxx.xxx
+________________________________
+
+========================================================================
+History:
+========================================================================
+check the push history
+	git log
+check the change in history
+	git log -p  -[int (how many you want check)]
+show history with graph
+	git log --graph | git log --pretty=format:"%h %s" --graph is good to view the change
+________________________________
+
+========================================================================
+Undo:
+========================================================================
+after commit , you realize you forgot/mistake one a file or commmit -m message,and you want to modify
+	git commit --amend "[commit message]"
+________________________________
+after commit , you want to undo the commit 
+	git reset HEAD xxx.xxx
+________________________________
+after change file, you want to undo changed file to prev version
+	git checkout -- xxx.xxx
+________________________________
+
+========================================================================
+Remote:
+========================================================================
+push code into remote:
+	git push origin [remote]
+
+
+
+========================================================================
+Alias:
+========================================================================
+given a shortcut to certain command
+	git config --global alias.co checkout
+git checkout =  git co after you assign a lisas
+the actual is store in ~/.gitconfig
+
+
+
+========================================================================
+Tag:
+========================================================================
+
+轻量标签（lightweight）与附注标签（annotated）
